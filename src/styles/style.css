@@ -1,0 +1,312 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button, a, p {   
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-block;
+  }
+
+  /*
+    AppBar
+  */
+   
+  .app-bar {
+    padding: 8px 16px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+   
+  .app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+  }
+   
+  .app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+  }
+   
+  .app-bar .app-bar__brand {
+    display: flex;
+    align-items: center;
+  }
+   
+  .app-bar .app-bar__brand h1 {
+    color: #a37119;
+    font-family: 'Lobster';
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+  }
+   
+  .app-bar .app-bar__navigation {
+    position: absolute;
+    top: 50px;
+    font-size: 22px;
+    left: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 4px;
+    background-color: white;
+    overflow: hidden;
+  }
+   
+  .app-bar .app-bar__navigation.open {
+    left: 0;
+  }
+   
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+   
+  /*
+    Main Content
+  */
+   
+  .content {
+    margin: 0 auto;
+    min-height: 100%;
+  }
+   
+  .content .content__heading {
+    font-weight: normal;
+  }
+   
+   
+  /*
+    Coffe
+  */
+   
+  .coffes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+   
+   
+  /*
+    Coffe Item
+  */
+   
+  .coffe-item {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .coffe-tittle {
+    font-size: 22px;
+  }
+   
+  .coffe-item__header {
+    position: relative;
+  }
+   
+  .coffe-item .coffe-item__header .coffe-item__header__poster {
+    width: 100%;
+  }
+   
+  .coffe-item .coffe-item__header .coffe-item__header__rating {
+    position: absolute;
+    padding: 8px;
+    bottom: 20px;
+    left: 0;
+    display: inline-block;
+    background-color: black;
+    color: white;
+  }
+   
+  .coffe-item .coffe-item__header .coffe-item__header__rating .coffe-item__header__rating__score {
+    margin-left: 10px;
+  }
+   
+  .coffe-item .coffe-item__content {
+    padding: 16px;
+  }
+   
+  .coffe-item .coffe-item__content h3 {
+    margin: 0 0 10px 0;
+  }
+   
+  .coffe-item .coffe-item__content h3 a {
+    color: #db0000;
+    text-decoration: none;
+  }
+   
+  .coffe-item .coffe-item__content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+   
+   
+  /*
+    Coffe
+  */
+   
+  .coffe {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+  }
+   
+  .coffe .coffe__poster {
+    width: 100%;
+    max-width: 400px;
+  }
+   
+  .coffe .coffe__info h4 {
+    margin: 8px 0;
+  }
+  
+  
+  /* 
+ * jumbotron
+ */
+
+  .jumbotron {
+    width: 100%;
+    height: 400px;
+    display: flex;
+  }
+
+  .jumbotron img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @media (min-width: 1200px) {
+    .jumbotron {
+      width: 100%;
+      height: 660px;
+      margin: 0 auto;
+    }
+  }
+
+  /* For viewports less than 1200px */
+  @media (max-width: 1199px) and (min-width: 768px) {
+    .jumbotron {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+  
+  .skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  }
+  
+  .skip-link:focus {
+    top: 0;
+    opacity: 1;
+  }
+  
+  .latest__label {
+    font-size: 32px;
+    font-weight: lighter;
+    margin: 20px auto;
+    text-align: center;
+    display:grid;
+  }
+
+  .nama_rest {
+    font-size: 25px;
+    margin: 15px auto;
+    display:grid;
+  }
+
+  .info {
+    font-size: 20px;
+    margin: 15px auto;
+    display:grid;
+  }
+
+  /*
+  Like
+  */
+  
+  .like {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #db0000;
+    
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    border-radius: 50%;
+    border: 0;
+    
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .detail {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  /*
+    Footer
+  */
+   
+  footer {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+   
+  footer p {
+    color: #aaaaaa;
+  }
+   
+  footer p a {
+    color: #a37119;
+    text-decoration: none;
+  }
