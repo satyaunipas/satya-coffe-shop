@@ -6,7 +6,12 @@ const DaftarRestaurant = {
     return `
       <div class="content">
         <div class="jumbotron">
-            <img src="./hero-image_1.jpg" alt="Gambar Jumbotron">
+            <picture>
+              <source media="(min-width: 465px)" srcset="./hero-image_1-small.jpg">
+              <source media="(min-width: 600px)" srcset="./hero-image_1-large.jpg">
+              <img src="./hero-image_1-large.jpg" 
+                  alt="Gambar Jumbotron">
+            </picture>
         </div>
         <h2 class="latest__label">Daftar Restaurant</h2>
           <div id="coffes" class="coffes">
